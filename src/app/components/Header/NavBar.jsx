@@ -76,14 +76,18 @@ const NavBar = () => {
                         About
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
-                        href="#live"
-                      >
-                        Live Images
-                      </Link>
-                    </li>
+                    {user ? (
+                      <li>
+                        <Link
+                          className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
+                          href="#live"
+                        >
+                          Live Images
+                        </Link>
+                      </li>
+                    ) : (
+                      ""
+                    )}
                     <li>
                       <Link
                         className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
@@ -97,7 +101,7 @@ const NavBar = () => {
                         className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
                         href="#recent"
                       >
-                        Recent work&apos;s
+                        Recent Work&apos;s
                       </Link>
                     </li>
                     <li>
@@ -167,14 +171,18 @@ const NavBar = () => {
                       About
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
-                      href="#live"
-                    >
-                      Live Images
-                    </Link>
-                  </li>
+                  {user ? (
+                    <li>
+                      <Link
+                        className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
+                        href="#live"
+                      >
+                        Live Images
+                      </Link>
+                    </li>
+                  ) : (
+                    ""
+                  )}
                   <li>
                     <Link
                       className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"

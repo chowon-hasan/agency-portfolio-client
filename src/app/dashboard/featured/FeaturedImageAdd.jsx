@@ -11,6 +11,7 @@ import Image from "next/image";
 import "../../../app/responsive.css";
 import localFont from "next/font/local";
 import { FaTrash } from "react-icons/fa";
+import uploadMyday from "@/Firebase/firebase.myday";
 const ethFont = localFont({
   src: "../../../../src/app/my-fonts/ethnocentric-rg.otf",
 });
@@ -28,10 +29,6 @@ const FeaturedImageAdd = () => {
     refetch,
   } = useDynamicGet("featuredimage", user?.email);
 
-  const [Images = {}] = featuredImages || [];
-  const { image, _id, email } = Images;
-  console.log(Images);
-
   useEffect(() => {
     if (user?.email) {
       refetch();
@@ -46,56 +43,70 @@ const FeaturedImageAdd = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setLoading(true);
-    const formData = new FormData();
-    formData.append("image", data.image[0]);
-    fetch(imageURLPer, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((Img) => {
-        if (Img.success) {
-          const imgLink = Img.data.display_url;
-          const updateInfo = {
-            email: user?.email,
-            image: imgLink,
-            time: new Date(),
-          };
-          fetch(`${process.env.NEXT_PUBLIC_MAIN_API}/featureimage`, {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify(updateInfo),
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              console.log("response data", data);
-              refetch();
-              reset();
-              toast("Succesfully added your day");
-              setLoading(false);
-            });
-        }
-      });
+    const images = Array.from(data.image);
+    try {
+      const imageUrls = await Promise.all(images.map(uploadMyday));
 
+      console.log(
+        "Uploaded image URLs for portfolio:",
+        imageUrls?.map((url) => url.downloadURL)
+      );
+
+      if (imageUrls) {
+        const updateInfo = {
+          email: user?.email,
+          image: imageUrls?.map((url) => url.downloadURL),
+          time: new Date(),
+        };
+        fetch(`${process.env.NEXT_PUBLIC_MAIN_API}/featureimage`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(updateInfo),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("response data", data);
+            refetch();
+            reset();
+            toast("Uploaded your images successfully");
+            setLoading(false);
+          });
+      }
+
+      reset();
+      setLoading(false);
+    } catch (error) {
+      console.error("Error uploading images:", error);
+      setLoading(false);
+    }
     console.log(data);
   };
 
-  const handleImageDelete = (id) => {
-    const procced = confirm("are you sure to delete this?");
+  const handleImageDelete = (imgLink) => {
+    console.log(imgLink);
+    const procced = confirm("Are you sure you want to delete this?");
     if (procced) {
-      fetch(`${process.env.NEXT_PUBLIC_MAIN_API}/deleteimage/${id}`, {
-        method: "DELETE",
-      })
+      const encodedImgLink = encodeURIComponent(imgLink);
+      fetch(
+        `${process.env.NEXT_PUBLIC_MAIN_API}/deleteimage/${encodedImgLink}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((result) => {
-          if (result.deletedCount > 0) {
+          if (result.success > 0) {
             toast("Deleted image successfully");
             refetch();
           }
+        })
+        .catch((error) => {
+          console.error("Error deleting image:", error);
+          toast("Error deleting image");
         });
     }
   };
@@ -124,6 +135,7 @@ const FeaturedImageAdd = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                   type="file"
+                  name="image"
                   className="block text-xs border text-white"
                   required
                   multiple
@@ -181,31 +193,39 @@ const FeaturedImageAdd = () => {
               <BeatLoader size={10} color="#ffffff" />
             </div>
           ) : (
-            <div className="grid grid-cols-3 items-center gap-5 gridSections5">
-              {featuredImages?.map((image, id) => (
+            <div className="">
+              {featuredImages?.map((featField, _id) => (
                 <div
-                  className="text-center relative bg-white p-5 text-black dayImgCont"
-                  key={id}
+                  className="text-center  bg-white p-5 text-black dayImgCont grid grid-cols-3 gap-5"
+                  key={_id}
                 >
-                  <div>
-                    <Image
-                      className="dayImg"
-                      style={{
-                        maxWidth: "200px",
-                        maxHeight: "150px",
-                        objectFit: "cover",
-                      }}
-                      src={image.image}
-                      width={300}
-                      height={300}
-                      alt="images"
-                    />
-                  </div>
+                  {featField?.image.map((img, index) => (
+                    <div key={index} className="relative">
+                      <Image
+                        className="dayImg"
+                        style={{
+                          maxWidth: "200px",
+                          maxHeight: "150px",
+                          objectFit: "cover",
+                        }}
+                        src={img}
+                        width={300}
+                        height={300}
+                        alt="images"
+                      />
+                      <button
+                        onClick={() => handleImageDelete(img)}
+                        className="absolute top-0 right-5 z-50 bg-black p-3"
+                      >
+                        <FaTrash className="text-white" />
+                      </button>
+                    </div>
+                  ))}
 
                   <p className="text-sm">
                     Uploaded at: <br />
-                    {image?.time &&
-                      new Date(image.time).toLocaleString("en-US", {
+                    {featField?.time &&
+                      new Date(featField.time).toLocaleString("en-US", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
@@ -216,12 +236,12 @@ const FeaturedImageAdd = () => {
                       })}
                   </p>
                   <div className="">
-                    <button
-                      onClick={() => handleImageDelete(image?._id)}
+                    {/* <button
+                      onClick={() => handleImageDelete(featField?._id)}
                       className="absolute top-0 right-0 z-50 bg-black p-3"
                     >
                       <FaTrash className="text-white" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}

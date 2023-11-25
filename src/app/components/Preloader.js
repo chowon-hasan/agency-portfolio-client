@@ -36,7 +36,7 @@ const Preloader = () => {
           <BarLoader className="mx-auto" color="#fff" />
         </div>
         <div className="text-center">
-          <p className="text-white">welcome at</p>
+          <p className="text-white">welcome to</p>
           <h1
             className={`${ethFont.className} text-7xl  mb-5 text-center text-white heading`}
           >

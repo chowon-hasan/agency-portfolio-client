@@ -124,7 +124,7 @@ const EventsDate = () => {
                     <BeatLoader size={10} color="#000" />
                   </div>
                 ) : (
-                  "Add Members"
+                  "Add Events"
                 )}
               </button>
             </div>
