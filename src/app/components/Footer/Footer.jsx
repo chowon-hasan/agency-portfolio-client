@@ -3,7 +3,7 @@ import FooterLogo from "./FooterLogo";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-[#000] text-neutral-content">
+      <footer className="footer p-10 bg-[#fff] text-black">
         <nav>
           <FooterLogo />
         </nav>

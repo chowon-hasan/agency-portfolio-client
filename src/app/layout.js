@@ -14,8 +14,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      {/* <!-- onContextMenu="return false;" --> */}
-      <body className={poppinsFont.className}>
+      <body onContextMenu="false" className={poppinsFont.className}>
         <Providers>
           <div className="">
             <div>
