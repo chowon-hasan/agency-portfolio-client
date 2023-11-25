@@ -1,0 +1,22 @@
+.Hero {
+  min-height: 90vh;
+}
+.imageBanner {
+  /* Set initial styles */
+  width: 500px;
+  height: 700px;
+  background-color: transparent; /* Set your desired background color */
+  /* Apply animation */
+  animation: rotateAnimation 4s ease-in-out infinite;
+}
+
+/* Define the animation */
+@keyframes rotateAnimation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}

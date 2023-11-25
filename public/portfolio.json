@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/RhBrNwm/wedding-1.png",
+    "category": "wedding"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/d0mHw4D/wedding-2.png",
+    "category": "wedding"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/MR4pk6H/wedding-3.png",
+    "category": "wedding"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/G01xWZq/wedding-4.png",
+    "category": "wedding"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/Jj91BvR/wedding-5.png",
+    "category": "wedding"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/Nghmd9G/girl-2205813-1280.jpg",
+    "category": "portrait"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/SvBXw3T/face-1511873-1280.jpg",
+    "category": "portrait"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/9915T09/bald-eagle-2715461-1280.jpg",
+    "category": "portrait"
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/VBW8hxp/jaguar-2894706-1280.jpg",
+    "category": "portrait"
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/Ksjc8bt/man-1866574-1280.jpg",
+    "category": "portrait"
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co/bgN6mL2/stage-light-4019064-1280.jpg",
+    "category": "event"
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co/mTBrbKN/men-1854191-1280.jpg",
+    "category": "event"
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co/0csLPb0/wedding-1846114-1280.jpg",
+    "category": "event"
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co/cL7nDDJ/beach-1854076-1280.jpg",
+    "category": "event"
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co/yfVC5Z8/wedding-5816361-1280.jpg",
+    "category": "event"
+  },
+  {
+    "id": 16,
+    "image": "https://i.ibb.co/rpnGwT2/photographer-7902219-1280.jpg",
+    "category": "travel"
+  },
+  {
+    "id": 17,
+    "image": "https://i.ibb.co/bXR3Hzb/man-6800728-1280.jpg",
+    "category": "travel"
+  },
+  {
+    "id": 18,
+    "image": "https://i.ibb.co/2cR5QdT/dumbo-5212670-1280.jpg",
+    "category": "travel"
+  },
+  {
+    "id": 19,
+    "image": "https://i.ibb.co/zFjPFzY/backpack-1839705-1280.jpg",
+    "category": "travel"
+  },
+  {
+    "id": 20,
+    "image": "https://i.ibb.co/XZJvGyC/dubai-1767540-1280.jpg",
+    "category": "travel"
+  }
+]

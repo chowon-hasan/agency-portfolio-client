@@ -1,0 +1,14 @@
+.accent {
+  color: #000;
+}
+.header {
+  position: fixed;
+  top: 0;
+}
+.navLinks_nav:focus {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.phoneLogo {
+  display: none;
+}

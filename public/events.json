@@ -1,0 +1,72 @@
+[
+  {
+    "email": "john.doe@example.com",
+    "website": "www.example1.com",
+    "companyLogo": "https://i.ibb.co/rZwwhfc/image.png",
+    "clientImage": "https://i.ibb.co/K5PJcdM/image.png",
+    "phoneNumber": "+1234567890",
+    "name": "John Doe",
+    "review": 4.5,
+    "description": "Excellent service and attention to detail. Our collaboration with this company was truly outstanding.",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/example1",
+      "linkedin": "https://www.linkedin.com/in/example1"
+    }
+  },
+  {
+    "email": "jane.smith@example.com",
+    "website": "www.example2.com",
+    "companyLogo": "https://i.ibb.co/rZwwhfc/image.png",
+    "clientImage": "https://i.ibb.co/d5V16SP/image.png",
+    "phoneNumber": "+9876543210",
+    "name": "Jane Smith",
+    "review": 5,
+    "description": "Incredible experience! The team went above and beyond to deliver exceptional results. Highly recommended.",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/example2",
+      "linkedin": "https://www.linkedin.com/in/example2"
+    }
+  },
+  {
+    "email": "alex.wilson@example.com",
+    "website": "www.example3.com",
+    "companyLogo": "https://i.ibb.co/rZwwhfc/image.png",
+    "clientImage": "https://i.ibb.co/YtyfCD7/image.png",
+    "phoneNumber": "+1122334455",
+    "name": "Alex Wilson",
+    "review": 4,
+    "description": "Great communication and professional approach. It was a pleasure working with this company.",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/example3",
+      "linkedin": "https://www.linkedin.com/in/example3"
+    }
+  },
+  {
+    "email": "emily.jones@example.com",
+    "website": "www.example4.com",
+    "companyLogo": "https://i.ibb.co/rZwwhfc/image.png",
+    "clientImage": "https://i.ibb.co/rFDDRv6/image.png",
+    "phoneNumber": "+3344556677",
+    "name": "Emily Jones",
+    "review": 3.5,
+    "description": "Good service overall. There were some minor issues, but the team was quick to address them.",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/example4",
+      "linkedin": "https://www.linkedin.com/in/example4"
+    }
+  },
+  {
+    "email": "david.miller@example.com",
+    "website": "www.example5.com",
+    "companyLogo": "https://i.ibb.co/rZwwhfc/image.png",
+    "clientImage": "https://i.ibb.co/d5V16SP/image.png",
+    "phoneNumber": "+9988776655",
+    "name": "David Miller",
+    "review": 4,
+    "description": "Solid performance and excellent results. The team demonstrated expertise and professionalism throughout the project.",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/example5",
+      "linkedin": "https://www.linkedin.com/in/example5"
+    }
+  }
+]

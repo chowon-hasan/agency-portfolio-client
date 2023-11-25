@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Alex warner",
+    "designation": "photographer",
+    "image": "https://i.ibb.co/pbg1BVQ/portrait-7604619-1280.jpg",
+    "about": "we are passionate creators who bring your unique moments to life through the lens. They are also known as the creators of the original series.the belief that every moment, no matter how ordinary, holds the potential for extraordinary storytelling, we've committed ourselves. ",
+    "clicks": [
+      "https://i.ibb.co/0csLPb0/wedding-1846114-1280.jpg",
+      "https://i.ibb.co/XZJvGyC/dubai-1767540-1280.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "samir Hafiz",
+    "designation": "photographer",
+    "image": "https://i.ibb.co/sRkqW2j/portrait-7942151-1280.jpg",
+    "about": "we are passionate creators who bring your unique moments to life through the lens. They are also known as the creators of the original series.the belief that every moment, no matter how ordinary, holds the potential for extraordinary storytelling, we've committed ourselves. ",
+    "clicks": [
+      "https://i.ibb.co/0csLPb0/wedding-1846114-1280.jpg",
+      "https://i.ibb.co/XZJvGyC/dubai-1767540-1280.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "sonia ",
+    "designation": "photographer",
+    "image": "https://i.ibb.co/gR31v4z/woman-4297471-1280.jpg",
+    "about": "we are passionate creators who bring your unique moments to life through the lens. They are also known as the creators of the original series.the belief that every moment, no matter how ordinary, holds the potential for extraordinary storytelling, we've committed ourselves. ",
+    "clicks": [
+      "https://i.ibb.co/0csLPb0/wedding-1846114-1280.jpg",
+      "https://i.ibb.co/XZJvGyC/dubai-1767540-1280.jpg"
+    ]
+  }
+]

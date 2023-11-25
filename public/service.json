@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Landscape Photography",
+    "description": "we are passionate creators who bring your unique moments to life through the lens. With a shared love for photography and cinematography.",
+    "image": "https://i.ibb.co/0jVH0ny/night-5222269-1280.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Wedding Photography",
+    "description": "we are passionate creators who bring your unique moments to life through the lens. With a shared love for photography and cinematography.",
+    "image": "https://i.ibb.co/hBb5g3c/newlyweds-5774229-1280.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Food Photography",
+    "description": "we are passionate creators who bring your unique moments to life through the lens. With a shared love for photography and cinematography.",
+    "image": "https://i.ibb.co/yQ3Sc4s/pancakes-2139844-1280.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Seascape Photography",
+    "description": "we are passionate creators who bring your unique moments to life through the lens. With a shared love for photography and cinematography.",
+    "image": "https://i.ibb.co/JHS7ZZL/beach-2178747-1280.jpg"
+  }
+]
