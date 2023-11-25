@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import useAuth from "@/Hooks/useAuth";
@@ -222,7 +222,7 @@ const FeaturedImageAdd = () => {
                     </div>
                   ))}
 
-                  <p className="text-sm">
+                  {/* <p className="text-sm">
                     Uploaded at: <br />
                     {featField?.time &&
                       new Date(featField.time).toLocaleString("en-US", {
@@ -234,7 +234,7 @@ const FeaturedImageAdd = () => {
                         second: "numeric",
                         timeZone: "Asia/Dhaka", // Set to Bangladesh time
                       })}
-                  </p>
+                  </p> */}
                   <div className="">
                     {/* <button
                       onClick={() => handleImageDelete(featField?._id)}
