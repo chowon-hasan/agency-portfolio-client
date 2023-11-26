@@ -196,7 +196,7 @@ const NavBar = () => {
                       className="navLinks_nav text-[#000] hover:bg-transparent hover:text-black"
                       href="#recent"
                     >
-                      Recent work&apos;s
+                      Recent Work&apos;s
                     </Link>
                   </li>
                   <li>

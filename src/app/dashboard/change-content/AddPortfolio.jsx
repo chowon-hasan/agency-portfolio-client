@@ -128,7 +128,7 @@ const AddPortfolio = () => {
   };
 
   return (
-    <section className="bg-black mt-16 p-5 rounded-md border">
+    <section className="bg-white text-black mt-16 p-5 rounded-md border">
       <h1 className="text-3xl capitalize titlePopins">
         5. Add images to your Portfolio gallery by category.
       </h1>
@@ -163,13 +163,13 @@ const AddPortfolio = () => {
                           gridTemplateColumns: "repeat(4, 1fr)",
                           gap: "20px",
                         }}
-                        className="gridSections3"
+                        className="gridSections3 mt-5"
                       >
                         {cat.images.flat().map((image, index) => (
                           <div key={index} className="relative">
                             {isLoading ? (
                               <div className="h-[10px] flex flex-col justify-center items-center">
-                                <BeatLoader size={10} color="#ffffff" />
+                                <BeatLoader size={10} color="#000" />
                               </div>
                             ) : (
                               <div className="">
@@ -188,7 +188,7 @@ const AddPortfolio = () => {
                                 /> */}
                                 <button
                                   onClick={() => handleImageDelete(image)}
-                                  className=" bg-black p-3 absolute  top-0 right-0 z-50"
+                                  className=" border p-3 absolute  top-0 right-0 z-50"
                                 >
                                   <FaTrash />
                                 </button>
@@ -209,7 +209,7 @@ const AddPortfolio = () => {
               <input
                 type="file"
                 name="image"
-                className="block text-xs border text-white mt-5 mx-auto"
+                className="block text-xs border text-black mt-5 mx-auto"
                 required
                 multiple
                 {...register("image", { required: true })}
@@ -226,7 +226,7 @@ const AddPortfolio = () => {
               <div className="mt-2">
                 <button
                   type="submit"
-                  className="btn btn-wide bg-white border-0 text-black mt-5 hover:bg-white"
+                  className="btn btn-wide bg-black border-0 text-white mt-5 hover:bg-black"
                 >
                   {Loading ? (
                     <div
@@ -237,7 +237,7 @@ const AddPortfolio = () => {
                               justify-center 
                               items-center"
                     >
-                      <BeatLoader size={10} color="#000" />
+                      <BeatLoader size={10} color="#fff" />
                     </div>
                   ) : (
                     "Add Images"

@@ -108,7 +108,7 @@ const LogoChange = () => {
       </h1>
       <div className="my-5 text-center py-5">
         <h2 className="mb-5">See how it will looks after change the logo</h2>
-        <div className="border-b border-red-900 w-full z-1 backdrop-blur-md bg-white/30">
+        <div className="border-b border-red-900 w-full z-1 backdrop-blur-md bg-white text-black">
           <div className="navbar transparent">
             <div className="navbar-start">
               <div className="dropdown">
