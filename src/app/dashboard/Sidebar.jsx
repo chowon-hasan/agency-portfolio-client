@@ -36,10 +36,12 @@ const Sidebar = () => {
         method: "POST",
       });
       const data = await res.json();
+      localStorage.removeItem("UTHENTICATED_Erorr");
       toast.success("logout successful");
       if (path.includes("/dashboard")) {
-        replace("/");
-        // window.location.reload();
+        window.location.reload();
+        // replace("/");
+        window.location.href = "/";
       }
     }
   };

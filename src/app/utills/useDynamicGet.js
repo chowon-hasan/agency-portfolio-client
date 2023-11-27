@@ -27,8 +27,17 @@ const useDynamicGet = (endpoint, email) => {
   const { isLoading, data, refetch } = useQuery({
     queryKey: [endpoint, email],
     queryFn: async () => {
+      const token = localStorage.getItem("UTHENTICATED_Erorr");
+      console.log(token, "token");
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_MAIN_API}/${endpoint}/${email}`
+        `${process.env.NEXT_PUBLIC_MAIN_API}/${endpoint}/${email}`,
+        {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
       );
       const data = await res.json();
       return data;

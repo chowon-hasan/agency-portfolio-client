@@ -63,11 +63,25 @@ const Login = () => {
         body: JSON.stringify(userInfo),
       })
         .then((res) => res.json())
-        .then(() => {
+        .then((data) => {
+          console.log(data);
           toast.dismiss(toastId);
           toast.success("signin user sucessfully");
-          // replace(from);
-          window.location.href = "/dashboard";
+          const loggedUser = { user: user?.email };
+          fetch(`${process.env.NEXT_PUBLIC_MAIN_API}/jwt`, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(loggedUser),
+          })
+            .then((res) => res.json())
+            .then((jwtdata) => {
+              console.log(jwtdata);
+              localStorage.setItem("UTHENTICATED_Erorr", jwtdata.token);
+              // replace(from);
+              window.location.href = "/dashboard";
+            });
         });
     } catch (error) {
       toast.dismiss(toastId);
