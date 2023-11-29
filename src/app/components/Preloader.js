@@ -19,7 +19,7 @@ const Preloader = () => {
         setLoading(false);
         clearInterval(timer);
       }
-    }, 1000);
+    }, 2000);
 
     // Clear the timer when the component unmounts
     return () => clearInterval(timer);
