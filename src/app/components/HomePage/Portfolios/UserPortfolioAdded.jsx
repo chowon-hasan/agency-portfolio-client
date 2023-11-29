@@ -15,17 +15,21 @@ const UserPortfolioAdded = () => {
     isLoading,
     refetch,
   } = useDynamicGet("getportfolioimages", user?.email);
-  console.log(
-    UserPortfolioImages?.map((port) =>
-      port.portfolio.map((c) => c.categoryName)
-    )
-  );
+  // console.log(
+  //   UserPortfolioImages?.map((port) =>
+  //     port.portfolio.map((c) => c.categoryName)
+  //   )
+  // );
 
   useEffect(() => {
     if (user?.email) {
       refetch();
     }
   }, [user?.email, refetch]);
+
+  if (!Array.isArray(UserPortfolioImages)) {
+    return null; // or handle the case when AddSection is not an array
+  }
   return (
     <section>
       {UserPortfolioImages?.length > 0 ? (

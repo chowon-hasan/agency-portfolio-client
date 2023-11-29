@@ -21,7 +21,9 @@ const MydayHome = () => {
     isLoading,
     refetch,
   } = useDynamicGet("featuredimage", user?.email);
-  const allImages = featuredImages?.flatMap((item) => item.image);
+  const allImages = Array.isArray(featuredImages)
+    ? featuredImages.flatMap((item) => item.image)
+    : [];
 
   console.log(allImages);
   useEffect(() => {

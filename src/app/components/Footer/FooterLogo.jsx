@@ -13,7 +13,7 @@ const FooterLogo = () => {
     refetch,
   } = useDynamicGet("getLogos", user?.email);
 
-  const [logo = {}] = Logos || [];
+  const [logo = {}] = Logos && Logos.length ? Logos : [];
   const { image } = logo;
 
   useEffect(() => {

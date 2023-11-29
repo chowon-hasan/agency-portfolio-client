@@ -14,14 +14,13 @@ import "../../../../app/responsive.css";
 const RecentClient = () => {
   const { user } = useAuth();
   const { data: recentWorksStatic } = useGetMethod("recentworks");
-  console.log(recentWorksStatic, "hello");
+  console.log(recentWorksStatic);
 
   const {
     data: RecentWorks,
     isLoading,
     refetch,
   } = useDynamicGet("getrecentworkimages", user?.email);
-  console.log(RecentWorks);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedclientImage, setSelectedclientImage] = useState(null);
 
@@ -39,6 +38,14 @@ const RecentClient = () => {
     setSelectedclientImage(image);
     document.getElementById("my_modal_5").showModal();
   };
+
+  // if (!Array.isArray(RecentWorks)) {
+  //   return null; // or handle the case when AddSection is not an array
+  // }
+  // if (!Array.isArray(recentWorksStatic)) {
+  //   return null; // or handle the case when AddSection is not an array
+  // }
+  console.log(recentWorksStatic);
   return (
     <section className="my-12 z-0">
       <div className="container mx-auto">
@@ -59,6 +66,7 @@ const RecentClient = () => {
             </div>
           ))}
         </div>
+
         <div className="grid grid-cols-3 gap-5 my-12 items-center overflow-hidden gridSections">
           {recentWorksStatic?.map(({ image, _id }) => (
             <div key={_id} className="" onClick={() => handleImageClick(image)}>

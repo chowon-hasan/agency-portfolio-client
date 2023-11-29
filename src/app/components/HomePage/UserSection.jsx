@@ -23,6 +23,10 @@ const UserSection = () => {
       refetch();
     }
   }, [user?.email, refetch]);
+
+  if (!Array.isArray(AddSection)) {
+    return null; // or handle the case when AddSection is not an array
+  }
   return (
     <div className="">
       {AddSection?.map((section) => (
