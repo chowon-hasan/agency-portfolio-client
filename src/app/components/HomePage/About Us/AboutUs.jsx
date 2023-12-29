@@ -4,7 +4,7 @@ import Image from "next/image";
 import AboutImg from "/public/images/aboutUsman.jpg";
 import localFont from "next/font/local";
 import ButtonWhite from "../../Button/ButtonWhite";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const ethFont = localFont({
   src: "../../../../app/my-fonts/ethnocentric-rg.otf",

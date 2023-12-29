@@ -7,7 +7,7 @@ import "./portfolio.css";
 import useGetMethod from "@/app/utills/useGetMethod";
 import { BeatLoader } from "react-spinners";
 import PhotoFrame from "../../PhotoFrame";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const PortfolioClient = () => {
   const [wedding, setWedding] = useState([]);
@@ -81,9 +81,9 @@ const PortfolioClient = () => {
                 }}
                 className="gridSections2"
               >
-                {wedding?.map(({ image, id }) => (
+                {wedding?.map(({ image, id }, i) => (
                   <>
-                    <div key={id}>
+                    <div key={i}>
                       <PhotoFrame imageUrl={image} altText={image} />
                     </div>
                   </>
@@ -97,9 +97,9 @@ const PortfolioClient = () => {
                 }}
                 className="gridSections2"
               >
-                {travel?.map(({ image, id }) => (
+                {travel?.map(({ image, id }, i) => (
                   <>
-                    <div key={id}>
+                    <div key={i}>
                       <PhotoFrame imageUrl={image} altText={image} />
                     </div>
                   </>
@@ -113,9 +113,9 @@ const PortfolioClient = () => {
                 }}
                 className="gridSections2"
               >
-                {portrait?.map(({ image, id }) => (
+                {portrait?.map(({ image, id }, i) => (
                   <>
-                    <div key={id}>
+                    <div key={i}>
                       <PhotoFrame imageUrl={image} altText={image} />
                     </div>
                   </>
@@ -129,9 +129,9 @@ const PortfolioClient = () => {
                 }}
                 className="gridSections2"
               >
-                {event?.map(({ image, id }) => (
+                {event?.map(({ image, id }, i) => (
                   <>
-                    <div key={id}>
+                    <div key={i}>
                       <PhotoFrame imageUrl={image} altText={image} />
                     </div>
                   </>

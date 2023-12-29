@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import { BeatLoader } from "react-spinners";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const ImageApi = process.env.NEXT_PUBLIC_IMAGE_API;
 

@@ -8,7 +8,7 @@ import { BeatLoader } from "react-spinners";
 import Button from "../../Button/Button";
 import useAuth from "@/Hooks/useAuth";
 import useDynamicGet from "@/app/utills/useDynamicGet";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 const ethFont = localFont({
   src: "../../../../app/my-fonts/ethnocentric-rg.otf",
 });

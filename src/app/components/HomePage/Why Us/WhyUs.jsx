@@ -2,7 +2,7 @@ import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Drone from "../../../../../public/images/drone.png";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 import {
   FaPushed,
   FaSketch,

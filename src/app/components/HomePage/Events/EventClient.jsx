@@ -7,7 +7,7 @@ import Link from "next/link";
 import useGetMethod from "@/app/utills/useGetMethod";
 import { BeatLoader } from "react-spinners";
 import Button from "../../Button/Button";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const ethFont = localFont({
   src: "../../../../app/my-fonts/ethnocentric-rg.otf",

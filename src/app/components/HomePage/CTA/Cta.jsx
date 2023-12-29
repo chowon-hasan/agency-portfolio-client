@@ -9,7 +9,7 @@ import { BeatLoader } from "react-spinners";
 import Lottie from "lottie-react";
 import lottieFileanimation from "/public/images/lottie.json";
 import toast from "react-hot-toast";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const ethFont = localFont({
   src: "../../../../app/my-fonts/ethnocentric-rg.otf",

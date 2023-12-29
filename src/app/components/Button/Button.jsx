@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import localFont from "next/font/local";
 import { FaCamera } from "react-icons/fa";
-import "../../../app/responsive.css";
+import "@/app/responsive.css";
 const ethFont = localFont({
   src: "../../../app/my-fonts/ethnocentric-rg.otf",
 });

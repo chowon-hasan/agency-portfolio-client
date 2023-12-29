@@ -1,7 +1,7 @@
 import React from "react";
 import RecentClient from "./RecentClient";
 import localFont from "next/font/local";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 const ethFont = localFont({
   src: "../../../../app/my-fonts/ethnocentric-rg.otf",
 });

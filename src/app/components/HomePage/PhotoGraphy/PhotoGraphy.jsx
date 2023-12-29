@@ -1,7 +1,7 @@
 import React from "react";
 import "./photo.css";
 import localFont from "next/font/local";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 import PhotoCard from "./PhotoCard";
 import StaticPhoto from "./StaticPhoto";
 

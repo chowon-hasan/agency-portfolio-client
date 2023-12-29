@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 import PhotoFrameVertical from "../../PhotoFrameVertical";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 const UserAddmembers = () => {
   const { user } = useAuth();
 

@@ -2,7 +2,7 @@ import React from "react";
 import localFont from "next/font/local";
 import PortfolioClient from "./PortfolioClient";
 import UserPortfolioAdded from "./UserPortfolioAdded";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const ethFont = localFont({
   src: "../../../../app/my-fonts/ethnocentric-rg.otf",

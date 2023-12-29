@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import localFont from "next/font/local";
 import Link from "next/link";
 import Button from "../../Button/Button";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 const moonFont = localFont({
   src: "../../../../app/my-fonts/Moonrising.otf",
 });

@@ -7,7 +7,7 @@ import { FaTh, FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import "./navbar.css";
 import useAuth from "@/Hooks/useAuth";
 import useDynamicGet from "@/app/utills/useDynamicGet";
-import "../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const NavBar = () => {
   const { user } = useAuth();

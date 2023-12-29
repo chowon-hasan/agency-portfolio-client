@@ -7,7 +7,7 @@ import { BeatLoader } from "react-spinners";
 import useDynamicGet from "@/app/utills/useDynamicGet";
 import useAuth from "@/Hooks/useAuth";
 import Button from "../../Button/Button";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const moonFont = localFont({
   src: "../../../../app/my-fonts/Moonrising.otf",

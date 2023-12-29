@@ -9,7 +9,7 @@ import { BeatLoader } from "react-spinners";
 import useDynamicGet from "@/app/utills/useDynamicGet";
 import useAuth from "@/Hooks/useAuth";
 import PhotoFrameBig from "../../PhotoFrameBig";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const RecentClient = () => {
   const { user } = useAuth();

@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import { FaYoutube } from "react-icons/fa";
 import useDynamicGet from "@/app/utills/useDynamicGet";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 import useAuth from "@/Hooks/useAuth";
 import { BeatLoader } from "react-spinners";
 

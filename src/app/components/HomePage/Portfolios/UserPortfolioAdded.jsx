@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import { BeatLoader } from "react-spinners";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import PhotoFrame from "../../PhotoFrame";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const UserPortfolioAdded = () => {
   const { user } = useAuth();

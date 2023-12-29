@@ -1,6 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 import ClientsComponent from "./ClientsComponent";
 
 const ethFont = localFont({

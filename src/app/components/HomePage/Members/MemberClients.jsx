@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import UserAddmembers from "./UserAddmembers";
 import PhotoFrameVertical from "../../PhotoFrameVertical";
-import "../../../../app/responsive.css";
+import "@/app/responsive.css";
 
 const MemberClients = () => {
   const { data: Ourmembers, isLoading, refetch } = useGetMethod("ourmembers");
