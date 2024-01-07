@@ -29,8 +29,8 @@ const CineStatic = () => {
                   <div className="">
                     <iframe
                       className="videoscine"
-                      width={500}
-                      height={400}
+                      width={400}
+                      height={300}
                       src={
                         video?.video ||
                         `https://www.youtube.com/embed/1_Hfi1EV0-k?si=FMpeQY0xEgNWEXgr`
