@@ -29,7 +29,7 @@ const Developer = () => {
             <div className="flex items-center gap-5 mt-5 text-white justify-center ">
               <Link
                 target="_blank"
-                href="https://www.facebook.com/megamind.megamind12fx/photos_by"
+                href="https://www.facebook.com/entrexx.official"
               >
                 <FaFacebook className="text-2xl" />
               </Link>
@@ -38,7 +38,7 @@ const Developer = () => {
               </Link>
               <Link
                 target="_blank"
-                href="https://www.linkedin.com/in/mehedi-hasan-chowon7/"
+                href="https://www.linkedin.com/company/entrexx-digital"
               >
                 <FaLinkedin className="text-2xl" />
               </Link>
@@ -46,7 +46,7 @@ const Developer = () => {
               <Link
                 target="_blank"
                 className="text-white text-xl"
-                href="https://portfolio-of-mehedi-hasan-chowon.netlify.app/"
+                href="https://entrexx-digital.vercel.app/"
               >
                 <FaGlobe />
               </Link>
